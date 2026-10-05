@@ -4,8 +4,8 @@ A static blog for a single author. Astro + TypeScript, Markdown content collecti
 Sveltia CMS at `/admin`, Pagefind search, Giscus comments, deployed to GitHub Pages by
 GitHub Actions.
 
-**Not yet deployed.** The target is <https://aidigitalsmb.github.io/>; see [Status](#status)
-for what has and has not been verified.
+**Live:** <https://aidigitalsmb.github.io/> — first deploy verified 2026-10-05; see
+[Status](#status) for what is still unset.
 
 No server, no database, no tracking scripts, no cookie banner, no CSS framework. Three
 runtime dependencies. The only client-side JavaScript is a theme toggle, a copy-link
@@ -95,10 +95,11 @@ grep -rhoE 'https?://[^"< ]+' dist --include=*.html --include=*.xml   | grep -v 
 
 ## Status
 
-Not yet deployed. This repository is a fresh copy of the blog template, rebranded for
-AIDigitalSMB. The Actions workflow is in place; GitHub Pages must be set to the
-**GitHub Actions** source and a first deploy must succeed before the site is live. Until a
-live check has been run, nothing here has been verified against a live site.
+Deployed. This repository is a fresh copy of the blog template, rebranded for AIDigitalSMB.
+GitHub Pages is set to the **GitHub Actions** source (`build_type: workflow`), and the first
+Actions run on 2026-10-05 built and deployed the site. A smoke test the same day returned
+200 for `/`, `/blog/`, `/admin/`, `/rss.xml`, `/sitemap-index.xml`, `/logo.png` and
+`/favicon.png`, and the page title and header show AIDigitalSMB.
 
 Outstanding setup — none of it blocking, all of it in
 [docs/setup.md](docs/setup.md):

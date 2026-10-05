@@ -1,6 +1,6 @@
 # Deployment
 
-**Target URL:** <https://aidigitalsmb.github.io/> — not yet verified live (see "Verifying a deployment")
+**Live:** <https://aidigitalsmb.github.io/> — first deploy verified 2026-10-05
 **Repository:** `AIDigitalSMB/AIDigitalSMB.github.io` — GitHub Pages **user** site, served from the domain root
 
 ## How it works
@@ -95,8 +95,9 @@ curl -s -o /dev/null -w '%{http_code}\n' -L "$B/blog/draft-not-for-production/" 
 curl -s -L "$B/" | grep -ohE 'https?://[^"]+' | grep -v 'aidigitalsmb' | sort -u
 ```
 
-Not yet verified against a live site — this repository has only just been created. Run
-the checks above once Pages is on and a first deploy has gone out.
+First verified on 2026-10-05: the initial Actions run succeeded, and `/`, `/blog/`,
+`/admin/`, `/rss.xml`, `/sitemap-index.xml`, `/logo.png` and `/favicon.png` all returned
+200. `/about/`, `/contact/` and `/search/` are switched off in `FEATURES` and 404 by design.
 
 ## Rollback
 

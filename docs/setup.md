@@ -8,8 +8,8 @@ Status as of 2026-10-05:
 | Step | Status |
 | --- | --- |
 | Repository created and pushed | ✅ done |
-| Pages source set to GitHub Actions | ⏳ pending |
-| GitHub Actions workflow deploying | ⏳ pending — not yet verified live |
+| Pages source set to GitHub Actions | ✅ done (`build_type: workflow`) |
+| GitHub Actions workflow deploying | ✅ done — first run succeeded and the live site answers |
 | Fine-grained PAT for the CMS | ❌ not created |
 | Giscus comments | ❌ not configured (`repoId` / `categoryId` empty) |
 | Contact form endpoint | ❌ not set |
@@ -18,12 +18,13 @@ Status as of 2026-10-05:
 
 ---
 
-## 1. Pages source
+## 1. Pages source ✅
 
 **Settings → Pages → Build and deployment → Source: `GitHub Actions`**
 
-Not yet verified. Once set, `build_type` reads `workflow`, and a run produces a single
-green pipeline with no accompanying `pages-build-deployment` job.
+Done on 2026-10-05, via the API before the first push. `build_type` reads `workflow`, and
+the first run produced a single green pipeline with no accompanying
+`pages-build-deployment` job.
 
 It matters because the alternative — *Deploy from a branch* — runs a Jekyll build
 alongside the Astro workflow, and Jekyll cannot parse `.astro` files:
