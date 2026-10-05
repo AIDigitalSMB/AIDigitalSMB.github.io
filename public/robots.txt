@@ -1,0 +1,11 @@
+# Served at https://aidigitalsmb.github.io/robots.txt
+#
+# This is a GitHub Pages *user* site, so the file sits at the domain root and
+# crawlers honour it. (On a project site it would live under the repo sub-path,
+# where it is ignored.)
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://aidigitalsmb.github.io/sitemap-index.xml
